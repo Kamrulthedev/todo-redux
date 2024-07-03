@@ -63,7 +63,7 @@ const TodoCread = ({
         <p className="flex-[2]">{description}</p>
         <div className="">
           <button
-            onClick={() => updateData(removeTodo(id))}
+            onClick={() => updateData(removeTodo())}
             className="mx-6 rounded-lg text-sm font-serif text-white p-2 bg-red-500"
           >
             <svg
