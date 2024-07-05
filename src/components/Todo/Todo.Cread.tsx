@@ -1,5 +1,4 @@
 import { useUpdateTodoMutation } from "@/redux/api/api";
-import { removeTodo } from "@/redux/features/todoSlice";
 
 type TTodoCardProps = {
   _id: string;
@@ -17,7 +16,6 @@ const TodoCread = ({
   Priority,
 }: TTodoCardProps) => {
   const [updateData, { data, isLoading, isError }] = useUpdateTodoMutation();
-
   const hendelState = () => {
     const optoins = {
       id: _id,
@@ -63,7 +61,7 @@ const TodoCread = ({
         <p className="flex-[2]">{description}</p>
         <div className="">
           <button
-            onClick={() => updateData(removeTodo())}
+      
             className="mx-6 rounded-lg text-sm font-serif text-white p-2 bg-red-500"
           >
             <svg
